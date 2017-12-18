@@ -1,5 +1,6 @@
 package screens;
 import com.badlogic.gdx.Gdx;
+import com.badlogic.gdx.Input;
 import com.badlogic.gdx.Screen;
 import com.badlogic.gdx.graphics.GL20;
 
@@ -27,6 +28,13 @@ public class GameScreen implements Screen {
 		
 	}
 	
+	public void handleInput() {
+		if(Gdx.input.isKeyPressed(Input.Keys.P)) {
+			game.setScreen(new PauseScreen(game));
+		}
+	}
+	
+	
 	@Override
 	public void render(float delta) {
 		player.update(delta);
@@ -47,8 +55,8 @@ public class GameScreen implements Screen {
 		ball.render(game.batch);
 		
 		// Render score 
-		// game.mediumFont.draw(game.batch, Integer.toString(game.userPoints), 150, Gdx.graphics.getHeight() - 25);
-		// game.mediumFont.draw(game.batch, Integer.toString(game.pcPoints), Gdx.graphics.getWidth() - 150, Gdx.graphics.getHeight() - 25); 
+		game.homeFont.draw(game.batch, Integer.toString(game.userPoints), 150, Gdx.graphics.getHeight() - 25);
+		game.homeFont.draw(game.batch, Integer.toString(game.pcPoints), Gdx.graphics.getWidth() - 150, Gdx.graphics.getHeight() - 25); 
 		game.batch.end();
 	
 	}

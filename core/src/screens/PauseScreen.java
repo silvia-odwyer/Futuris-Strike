@@ -8,13 +8,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.futuris.strike.FuturisStrikeGame;
 import com.badlogic.gdx.Screen;
 
-public class HomeScreen implements Screen {
+public class PauseScreen implements Screen {
 	private FuturisStrikeGame game;
-	private Texture texture;
 	private SpriteBatch batch;
-	private Sprite sprite;
+	private Texture texture;
 	
-	public HomeScreen(FuturisStrikeGame game) {
+	public PauseScreen(FuturisStrikeGame game) {
 		this.game = game;
 		
 	}
@@ -31,9 +30,7 @@ public class HomeScreen implements Screen {
 	}
 	
 	public void create() {
-//		batch = new SpriteBatch();
-//		Texture texture = new Texture(Gdx.files.internal("../assets/blue_button.png"));
-//		sprite = new Sprite(texture);
+
 	}
 	
 	@Override 
@@ -43,9 +40,7 @@ public class HomeScreen implements Screen {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		game.batch.begin();
-		game.homeFont.draw(game.batch, "FUTURIS STRIKE", Gdx.graphics.getWidth() / 2 - 40, Gdx.graphics.getHeight() - 40);
-		game.homeFont.draw(game.batch, "Hi There", 200, 200);
-//		sprite.draw(batch);	
+		game.homeFont.draw(game.batch, "PAUSED GAME", Gdx.graphics.getWidth() / 2 - 40, Gdx.graphics.getHeight() - 40);
 		game.batch.end();
 	}
 	
@@ -78,3 +73,4 @@ public class HomeScreen implements Screen {
 		texture.dispose();
 	}	
 }
+

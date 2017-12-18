@@ -24,7 +24,7 @@ public class FuturisStrikeGame extends Game {
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		homeFont = new BitmapFont(Gdx.files.internal("data/MediumFont/MediumEmulogic.fnt"));
+		homeFont = new BitmapFont(Gdx.files.internal("../assets/ProFontWindows.fnt"));
 		userPoints = 0;
 		pcPoints = 0;
 		this.setScreen(new HomeScreen(this));
