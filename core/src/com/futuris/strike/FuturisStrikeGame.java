@@ -35,11 +35,11 @@ public class FuturisStrikeGame extends Game {
 		userPoints = 0;
 		pcPoints = 0;
 		
-		userLossSound = Gdx.audio.newSound(Gdx.files.internal("17.wav"));
-		userPointIncrementSound =  Gdx.audio.newSound(Gdx.files.internal("88.wav"));
-		bounceSound = Gdx.audio.newSound(Gdx.files.internal("120.wav"));
-		rallySound = Gdx.audio.newSound(Gdx.files.internal("153.wav"));
-//		
+		userLossSound = Gdx.audio.newSound(Gdx.files.internal("17.mp3"));
+		userPointIncrementSound =  Gdx.audio.newSound(Gdx.files.internal("88.mp3"));
+		bounceSound = Gdx.audio.newSound(Gdx.files.internal("120.mp3"));
+		rallySound = Gdx.audio.newSound(Gdx.files.internal("153.mp3"));
+		
 //		music = Gdx.audio.newMusic(Gdx.files.internal("../assets/"));
 //		music.setLooping(true);
 //		music.play();
