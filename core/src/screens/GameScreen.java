@@ -30,6 +30,7 @@ public class GameScreen implements Screen {
 	
 	public void handleInput() {
 		if(Gdx.input.isKeyPressed(Input.Keys.P)) {
+			System.out.println("Setting to pause screen");
 			game.setScreen(new PauseScreen(game));
 		}
 	}
@@ -37,6 +38,8 @@ public class GameScreen implements Screen {
 	
 	@Override
 	public void render(float delta) {
+		handleInput();
+		
 		player.update(delta);
 		ball.update(delta, player, pc);
 		

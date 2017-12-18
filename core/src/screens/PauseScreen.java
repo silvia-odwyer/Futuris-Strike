@@ -15,7 +15,7 @@ public class PauseScreen implements Screen {
 	
 	public PauseScreen(FuturisStrikeGame game) {
 		this.game = game;
-		
+		System.out.println("Constructor getting called");
 	}
 	
 	@Override 

@@ -21,12 +21,28 @@ public class FuturisStrikeGame extends Game {
 	public int userPoints;
 	public int pcPoints;
 	
+	public Sound userLossSound;
+	public Sound userPointIncrementSound;
+	public Sound bounceSound;
+	public Sound rallySound;
+	
+//	public Music music;
+	
 	@Override
 	public void create () {
 		batch = new SpriteBatch();
-		homeFont = new BitmapFont(Gdx.files.internal("../assets/ProFontWindows.fnt"));
+		homeFont = new BitmapFont(Gdx.files.internal("ProFontWindows.fnt"));
 		userPoints = 0;
 		pcPoints = 0;
+		
+		userLossSound = Gdx.audio.newSound(Gdx.files.internal("17.wav"));
+		userPointIncrementSound =  Gdx.audio.newSound(Gdx.files.internal("88.wav"));
+		bounceSound = Gdx.audio.newSound(Gdx.files.internal("120.wav"));
+		rallySound = Gdx.audio.newSound(Gdx.files.internal("153.wav"));
+//		
+//		music = Gdx.audio.newMusic(Gdx.files.internal("../assets/"));
+//		music.setLooping(true);
+//		music.play();
 		this.setScreen(new HomeScreen(this));
 	}
 

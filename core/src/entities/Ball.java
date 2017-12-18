@@ -52,10 +52,12 @@ public class Ball extends Sprite {
 		
 		if (y < 0) {
 			ySpeed = -ySpeed;
+			game.bounceSound.play();
 		}
 				
 		if(y + ballHeight > Gdx.graphics.getHeight()) {
 			ySpeed = -ySpeed;
+			game.bounceSound.play();
 		}
 				
 		// Win or Lose Point
@@ -65,6 +67,7 @@ public class Ball extends Sprite {
 			ySpeed = 0;
 					
 				game.pcPoints++;
+				game.userLossSound.play();
 				game.setScreen(new GameScreen(game));
 					
 		}
@@ -74,6 +77,7 @@ public class Ball extends Sprite {
 			ySpeed = 0;
 					
 			game.userPoints++;
+			game.userPointIncrementSound.play();
 			game.setScreen(new GameScreen(game));
 		}
 				
@@ -83,11 +87,13 @@ public class Ball extends Sprite {
 		if(Intersector.overlaps(player.getRect(), rectangle)) {
 				
 			xSpeed = -xSpeed;
+			game.rallySound.play();
 					
 		}
 				
 		if(Intersector.overlaps(pc.getRect(), rectangle)) {
 			xSpeed = -xSpeed;
+			game.rallySound.play();
 		}
 	}
 	

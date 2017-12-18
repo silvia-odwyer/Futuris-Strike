@@ -16,7 +16,9 @@ public class HomeScreen implements Screen {
 	
 	public HomeScreen(FuturisStrikeGame game) {
 		this.game = game;
-		
+
+		batch = new SpriteBatch();
+		texture = new Texture(Gdx.files.internal("blue_button.png"));		
 	}
 	
 	@Override 
@@ -31,21 +33,19 @@ public class HomeScreen implements Screen {
 	}
 	
 	public void create() {
-//		batch = new SpriteBatch();
-//		Texture texture = new Texture(Gdx.files.internal("../assets/blue_button.png"));
-//		sprite = new Sprite(texture);
 	}
 	
 	@Override 
 	public void render(float delta) {
 		handleInput();
-		Gdx.gl.glClearColor(0,  0,  0,  0);
+		
+		Gdx.gl.glClearColor(10f / 256f,  18f / 256f,  20f / 256f,  0f);
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		game.batch.begin();
 		game.homeFont.draw(game.batch, "FUTURIS STRIKE", Gdx.graphics.getWidth() / 2 - 40, Gdx.graphics.getHeight() - 40);
 		game.homeFont.draw(game.batch, "Hi There", 200, 200);
-//		sprite.draw(batch);	
+		game.batch.draw(texture, 10, 10);
 		game.batch.end();
 	}
 	
