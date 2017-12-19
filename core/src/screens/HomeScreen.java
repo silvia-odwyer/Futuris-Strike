@@ -19,6 +19,7 @@ public class HomeScreen implements Screen {
 	private Texture controlsButton;
 	private SpriteBatch batch;
 	private Sprite sprite;
+	private Texture futurisStrikeLogo;
 	
 	private ShapeRenderer shapeRenderer;
 	
@@ -32,7 +33,7 @@ public class HomeScreen implements Screen {
 		startPlayingButton = new Texture(Gdx.files.internal("blue_button.png"));
 		startPlaying = new Texture(Gdx.files.internal("StartPlaying_small.png"));
 		controlsButton = new Texture(Gdx.files.internal("ControlsButton-small.png"));
-
+		futurisStrikeLogo = new Texture(Gdx.files.internal("futuris-strike-logo.png"));
 		shapeRenderer = new ShapeRenderer();
 	}
 	
@@ -79,7 +80,7 @@ public class HomeScreen implements Screen {
 				
 		game.batch.draw(controlsButton, 80, 80, Gdx.graphics.getWidth() - 80 - 80, 70);
 		game.batch.draw(startPlayingButton, 80, 80 + 70 + 20, Gdx.graphics.getWidth() - 80 - 80, 70);
-		
+		game.batch.draw(futurisStrikeLogo, 150, 80);
 		game.batch.end();
 		
 		stateTimer += delta;
@@ -102,7 +103,6 @@ public class HomeScreen implements Screen {
 	
 	@Override
 	public void pause() {
-		
 		
 	}
 	

@@ -24,7 +24,7 @@ public class Striker extends Sprite{
 	private Texture image;
 	
 	public Striker(boolean ai) {
-		image = new Texture("paddle.png");
+		image = new Texture("dark-blue-paddle.png");
 		
 		strikerWidth = image.getWidth();
 		strikerHeight = image.getHeight();
