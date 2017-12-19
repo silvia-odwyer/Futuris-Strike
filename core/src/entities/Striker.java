@@ -47,28 +47,48 @@ public class Striker extends Sprite{
 	}
 	public void update(float deltaTime) {
 		// Handle input
-		if(Gdx.input.isKeyPressed(Input.Keys.UP)) {
-			y += ySpeed;
+		if(!ai) {
+		
+			if(Gdx.input.isKeyPressed(Input.Keys.UP)) {
+				y += ySpeed;
+			}
+			
+			if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
+				y -= ySpeed;
+			}
+			
+			// Window Boundaries 
+			
+			if(y < 0) {
+				y = 0;
+			}
+			
+			if(y + strikerHeight > Gdx.graphics.getHeight()) {
+				y = Gdx.graphics.getHeight() - strikerHeight;
+				
+			}
+			
+			// Update rectangles 
+			rectangle.x = x;
+			rectangle.y = y;
 		}
 		
-		if(Gdx.input.isKeyPressed(Input.Keys.DOWN)) {
-			y -= ySpeed;
-		}
-		
-		// Window Boundaries 
-		
-		if(y < 0) {
-			y = 0;
-		}
-		
-		if(y + strikerHeight > Gdx.graphics.getHeight()) {
-			y = Gdx.graphics.getHeight() - strikerHeight;
+		if (ai) {
+			
+			if(y < 0) {
+				y = 0;
+			}
+			
+			if(y + strikerHeight > Gdx.graphics.getHeight()) {
+				y = Gdx.graphics.getHeight() - strikerHeight;
+				
+			}
+			
+			// Update rectangles 
+			rectangle.x = x;
+			rectangle.y = y;
 			
 		}
-		
-		// Update rectangles 
-		rectangle.x = x;
-		rectangle.y = y;
 		
 	}
 	

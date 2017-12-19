@@ -14,7 +14,6 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import screens.GameScreen;
 import screens.HomeScreen;
 
-
 public class FuturisStrikeGame extends Game {
 	public SpriteBatch batch;
 	public BitmapFont homeFont;
@@ -40,9 +39,9 @@ public class FuturisStrikeGame extends Game {
 		bounceSound = Gdx.audio.newSound(Gdx.files.internal("120.mp3"));
 		rallySound = Gdx.audio.newSound(Gdx.files.internal("153.mp3"));
 		
-//		music = Gdx.audio.newMusic(Gdx.files.internal("../assets/"));
-//		music.setLooping(true);
-//		music.play();
+		//music = Gdx.audio.newMusic(Gdx.files.internal("../assets/"));
+		//music.setLooping(true);
+		//music.play();
 		this.setScreen(new HomeScreen(this));
 	}
 

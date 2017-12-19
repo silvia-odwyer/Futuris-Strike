@@ -30,7 +30,7 @@ public class Ball extends Sprite {
 	
 	public Ball(FuturisStrikeGame game) {
 		this.game = game; 		
-		image = new Texture("ball.png");
+		image = new Texture("blue_ball.png");
 		
 		ballWidth = image.getWidth();
 		ballHeight = image.getHeight();

@@ -31,8 +31,8 @@ public class HomeScreen implements Screen {
 		batch = new SpriteBatch();
 		startPlayingButton = new Texture(Gdx.files.internal("blue_button.png"));
 		startPlaying = new Texture(Gdx.files.internal("StartPlaying_small.png"));
-		controlsButton = new Texture(Gdx.files.internal("ControlsButton.png"));
-		
+		controlsButton = new Texture(Gdx.files.internal("ControlsButton-small.png"));
+
 		shapeRenderer = new ShapeRenderer();
 	}
 	
@@ -58,22 +58,23 @@ public class HomeScreen implements Screen {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		shapeRenderer.begin(ShapeType.Line);
-		shapeRenderer.setColor(Color.valueOf("0fffff"));
+		shapeRenderer.setColor(Color.valueOf("00ffff"));
 		
 		
 //		shapeRenderer.line(new Vector2(0, Gdx.graphics.getHeight() - 50), new Vector2(Gdx.graphics.getWidth(), Gdx.graphics.getHeight()));
 		
-		for(int i = 20; i <= Gdx.graphics.getWidth(); i += 20) {
+		for(int i = 20; i <= Gdx.graphics.getWidth(); i += 60) {
 			shapeRenderer.line(new Vector2(i, 0), new Vector2(i - constant, Gdx.graphics.getHeight() + constant));
 		}
 		
-		for(int i = 20; i <= Gdx.graphics.getHeight(); i += 20) {
+		for(int i = 20; i <= Gdx.graphics.getHeight(); i += 60) {
 			shapeRenderer.line(new Vector2(0, i), new Vector2(Gdx.graphics.getWidth() + constant, i - constant));
 		}
 		
 		shapeRenderer.end();
 		
 		game.batch.begin();
+		//game.batch.draw(transparentBackground, 0, 0);
 		game.homeFont.draw(game.batch, "FUTURIS STRIKE", Gdx.graphics.getWidth() / 2 - 100f, Gdx.graphics.getHeight() - 40);
 				
 		game.batch.draw(controlsButton, 80, 80, Gdx.graphics.getWidth() - 80 - 80, 70);
@@ -92,14 +93,10 @@ public class HomeScreen implements Screen {
 		} else if (stateTimer > 15) {
 			stateTimer = 0;
 		}
-		
-		
 	}
 	
 	@Override
 	public void resize(int width, int height) {
-		
-		
 	}
 	
 	
@@ -111,7 +108,6 @@ public class HomeScreen implements Screen {
 	
 	@Override
 	public void resume() {
-		
 		
 	}
 	
