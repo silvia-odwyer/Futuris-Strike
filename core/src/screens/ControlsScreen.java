@@ -8,12 +8,12 @@ import com.badlogic.gdx.graphics.g2d.SpriteBatch;
 import com.futuris.strike.FuturisStrikeGame;
 import com.badlogic.gdx.Screen;
 
-public class PauseScreen implements Screen {
+public class ControlsScreen implements Screen {
 	private FuturisStrikeGame game;
 	private SpriteBatch batch;
 	private Texture texture;
 	
-	public PauseScreen(FuturisStrikeGame game) {
+	public ControlsScreen(FuturisStrikeGame game) {
 		this.game = game;
 		System.out.println("Constructor getting called");
 	}
