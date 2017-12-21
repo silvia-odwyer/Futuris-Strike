@@ -31,9 +31,9 @@ public class HomeScreen implements Screen {
 		this.game = game;
 
 		batch = new SpriteBatch();
-		startPlayingButton = new Texture(Gdx.files.internal("blue_button.png"));
+		startPlayingButton = new Texture(Gdx.files.internal("play_button_annotated.png"));
 		startPlaying = new Texture(Gdx.files.internal("StartPlaying_small.png"));
-		controlsButton = new Texture(Gdx.files.internal("ControlsButton-small.png"));
+		controlsButton = new Texture(Gdx.files.internal("controls_button_annotated.png"));
 		futurisStrikeLogo = new Texture(Gdx.files.internal("logo-small.png"));
 		shapeRenderer = new ShapeRenderer();
 	}
@@ -82,9 +82,9 @@ public class HomeScreen implements Screen {
 		//game.batch.draw(transparentBackground, 0, 0);
 		//game.homeFont.draw(game.batch, "FUTURIS STRIKE", Gdx.graphics.getWidth() / 2 - 100f, Gdx.graphics.getHeight() - 40);
 				
-		game.batch.draw(controlsButton, 80, 80, Gdx.graphics.getWidth() - 80 - 80, 70);
-		game.batch.draw(startPlayingButton, 80, 80 + 70 + 20, Gdx.graphics.getWidth() - 80 - 80, 70);
-		game.batch.draw(futurisStrikeLogo, 180, 300);
+		game.batch.draw(startPlayingButton, 110, 140);
+		game.batch.draw(controlsButton, 110, 30);
+		game.batch.draw(futurisStrikeLogo, 160, 300);
 		game.batch.end();
 		
 		stateTimer += delta;

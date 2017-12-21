@@ -12,10 +12,12 @@ public class ControlScreen implements Screen {
 	private FuturisStrikeGame game;
 	private SpriteBatch batch;
 	private Texture texture;
+	private Texture controlScreenImage;
 	
 	public ControlScreen(FuturisStrikeGame game) {
 		this.game = game;
-		System.out.println("Constructor getting called");
+		
+		controlScreenImage = new Texture(Gdx.files.internal("ControlScreen.png"));
 	}
 	
 	@Override 
@@ -40,7 +42,7 @@ public class ControlScreen implements Screen {
 		Gdx.gl.glClear(GL20.GL_COLOR_BUFFER_BIT);
 
 		game.batch.begin();
-		game.homeFont.draw(game.batch, "PAUSED GAME", Gdx.graphics.getWidth() / 2 - 40, Gdx.graphics.getHeight() - 40);
+		game.batch.draw(controlScreenImage, 20, -80);
 		game.batch.end();
 	}
 	
