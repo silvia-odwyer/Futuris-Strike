@@ -1,7 +1,7 @@
 # Futuris-Strike
-Futuris Strike is a futuristic arcade-style video game, inspired by the classic 70s arcade game, PONG. 
+Futuris Strike is a futuristic, arcade-style video game, inspired by the classic 70s arcade game, PONG. 
 
-With neon graphics, vectors that render to vanishing points, and techno-style fonts, this game gives a retro concept a new, 2024 makeover. A note to any followers: This UI may be used for future projects, so keep an eye out for it ;)
+With neon graphics, techno-style fonts, and lines that render to vanishing points, this game gives a retro concept a new, 2024 makeover. A note to any followers: This UI may be used for future projects, so keep an eye out for it ;)
 
 ## Screenshots
 ![The game in full swing](https://github.com/silvia-odwyer/Futuris-Strike/blob/master/gameplay-screenshot.PNG)
