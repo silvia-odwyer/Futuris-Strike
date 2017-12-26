@@ -44,11 +44,11 @@ public class HomeScreen implements Screen {
 	}
 	
 	public void handleInput() {
-		if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
+		if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
 			game.setScreen(new GameScreen(game));
 		}
 		
-		else if(Gdx.input.isKeyPressed(Input.Keys.C)) {
+		else if(Gdx.input.isKeyJustPressed(Input.Keys.C)) {
 			game.setScreen(new ControlScreen(game));
 		}
 	}

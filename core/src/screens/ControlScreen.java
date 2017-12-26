@@ -26,7 +26,7 @@ public class ControlScreen implements Screen {
 	}
 	
 	public void handleInput() {
-		if(Gdx.input.isKeyPressed(Input.Keys.ENTER)) {
+		if(Gdx.input.isKeyJustPressed(Input.Keys.ENTER)) {
 			game.setScreen(new HomeScreen(game));
 		}
 	}
